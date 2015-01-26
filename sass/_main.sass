@@ -1,216 +1,134 @@
 // Normally mainpage styles
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++font(verdana, verdana)
+=verdana
+	font-family: "Verdana", Arial, sans-serif
+
+a
+	text-decoration: none
+	&:hover
+		color: #000
+	&:link
+		color: #000
+	&:visited
+		color: #000
+	&:active
+		color: #000
+	
+.out
+	background: #FFF
+	
+.l-center
+	max-width: 960px
+	margin: 0 auto
+	
+// header
+.page-header__tools
+	border-bottom: 1px solid #dddddd
+	+clr
+	.tools-left
+		float: left
+	.tools-right
+		float: right
+	ul
+		display: inline-block
+		li
+			display: inline-block
+			a
+				display: inline-block
+				text-transform: uppercase
+				padding: 5px
+				font-size: 10px
+				color: #717171 
+				+verdana
+.page-header__logo-page
+	padding: 15px 0
+	+clr
+	a
+		float: left
+		line-height: 70px
+		img
+			vertical-align: middle
+.page-header__advertisment
+	float: right
+	width: percentage(600/960) 
+	height: 70px 
+	line-height: 70px
+	background: #ECECEC 
+	text-align: center
+	text-transform: uppercase
+	color: #CECECE 
+.page-header__menu
+	background: #DDD 
+	+clr
+	ul
+		float: left
+		height: 40px
+		+clr
+		li
+			float: left
+			line-height: 40px
+			a
+				padding: 0 10px
+				color: #717171 
+				font: 14px 'Open Sans', sans-serif
+				text-transform: uppercase
+				vertical-align: middle 
+			&:hover
+				background: #D45757 
+				a
+					color: #FFF
+.page-header__search
+	position: relative
+	float: right
+	width: 200px
+	input
+		background-color: #CECECE  
+		height: 40px
+		width: 100% 
+		padding: 0 15px
+		+box
+		+placeholder
+			color: #FFF
+			font: 14px 'Open Sans', sans-serif 
+			line-height: 14px 
+			text-transform: uppercase	
+	span
+		position: absolute
+		top: 15px
+		right: 13px
+		+s(search)
+
+// main
+main
+	+clr
+.container
+	width: percentage(630/960) 
+	margin-right: percentage(30/960)
+	float: left
+.article__header
+	margin: 20px 0 5px 0
+	font: 30px 'Open Sans', sans-serif 
+.article__date
+	display: inline-block
+	padding-right: 20px
+	color: #B0B0B0 
+	font-size: 11px
+	+verdana
+	span
+		display: inline-block
+		padding-right: 5px
+		+s(date) 
+.article__comments
+	display: inline-block
+	color: #B0B0B0 
+	font-size: 11px
+	+verdana
+	span
+		display: inline-block
+		padding-right: 5px
+		+s(comments)
+
+.sidebar
+	width: percentage(300/960) 
+	float: right

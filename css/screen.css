@@ -26,3 +26,62 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+@font-face { font-family: verdana; src: url("fonts/verdana.eot"); src: url("fonts/verdana.eot?#iefix") format("embedded-opentype"), url("fonts/verdana.woff2") format("woff2"), url("fonts/verdana.woff") format("woff"), url("fonts/verdana.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+a { text-decoration: none; }
+a:hover { color: black; }
+a:link { color: black; }
+a:visited { color: black; }
+a:active { color: black; }
+
+.out { background: white; }
+
+.l-center { max-width: 960px; margin: 0 auto; }
+
+.page-header__tools { border-bottom: 1px solid #dddddd; *zoom: 1; }
+.page-header__tools:after { content: " "; display: table; clear: both; }
+.page-header__tools .tools-left { float: left; }
+.page-header__tools .tools-right { float: right; }
+.page-header__tools ul { display: inline-block; }
+.page-header__tools ul li { display: inline-block; }
+.page-header__tools ul li a { display: inline-block; text-transform: uppercase; padding: 5px; font-size: 10px; color: #717171; font-family: "Verdana", Arial, sans-serif; }
+
+.page-header__logo-page { padding: 15px 0; *zoom: 1; }
+.page-header__logo-page:after { content: " "; display: table; clear: both; }
+.page-header__logo-page a { float: left; line-height: 70px; }
+.page-header__logo-page a img { vertical-align: middle; }
+
+.page-header__advertisment { float: right; width: 62.5%; height: 70px; line-height: 70px; background: #ececec; text-align: center; text-transform: uppercase; color: #cecece; }
+
+.page-header__menu { background: #dddddd; *zoom: 1; }
+.page-header__menu:after { content: " "; display: table; clear: both; }
+.page-header__menu ul { float: left; height: 40px; *zoom: 1; }
+.page-header__menu ul:after { content: " "; display: table; clear: both; }
+.page-header__menu ul li { float: left; line-height: 40px; }
+.page-header__menu ul li a { padding: 0 10px; color: #717171; font: 14px "Open Sans", sans-serif; text-transform: uppercase; vertical-align: middle; }
+.page-header__menu ul li:hover { background: #d45757; }
+.page-header__menu ul li:hover a { color: white; }
+
+.page-header__search { position: relative; float: right; width: 200px; }
+.page-header__search input { background-color: #cecece; height: 40px; width: 100%; padding: 0 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.page-header__search input:-ms-input-placeholder { color: white; font: 14px "Open Sans", sans-serif; line-height: 14px; text-transform: uppercase; }
+.page-header__search input:-moz-placeholder { color: white; font: 14px "Open Sans", sans-serif; line-height: 14px; text-transform: uppercase; }
+.page-header__search input::-moz-placeholder { color: white; font: 14px "Open Sans", sans-serif; line-height: 14px; text-transform: uppercase; }
+.page-header__search input::-webkit-input-placeholder { color: white; font: 14px "Open Sans", sans-serif; line-height: 14px; text-transform: uppercase; }
+.page-header__search input::placeholder { color: white; font: 14px "Open Sans", sans-serif; line-height: 14px; text-transform: uppercase; }
+.page-header__search span { position: absolute; top: 15px; right: 13px; background: url('../img/icons-s99c7416c4c.png') 0 -74px no-repeat; width: 14px; height: 14px; }
+
+main { *zoom: 1; }
+main:after { content: " "; display: table; clear: both; }
+
+.container { width: 65.625%; margin-right: 3.125%; float: left; }
+
+.article__header { margin: 20px 0 5px 0; font: 30px "Open Sans", sans-serif; }
+
+.article__date { display: inline-block; padding-right: 20px; color: #b0b0b0; font-size: 11px; font-family: "Verdana", Arial, sans-serif; }
+.article__date span { display: inline-block; padding-right: 5px; background: url('../img/icons-s99c7416c4c.png') 0 -51px no-repeat; width: 13px; height: 13px; }
+
+.article__comments { display: inline-block; color: #b0b0b0; font-size: 11px; font-family: "Verdana", Arial, sans-serif; }
+.article__comments span { display: inline-block; padding-right: 5px; background: url('../img/icons-s99c7416c4c.png') 0 -30px no-repeat; width: 15px; height: 11px; }
+
+.sidebar { width: 31.25%; float: right; }
