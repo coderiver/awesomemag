@@ -8,8 +8,6 @@ a
 	text-decoration: none
 	&:hover
 		color: #000
-	&:link
-		color: #000
 	&:visited
 		color: #000
 	&:active
@@ -49,15 +47,17 @@ a
 		line-height: 70px
 		img
 			vertical-align: middle
-.page-header__advertisment
-	float: right
-	width: percentage(600/960) 
-	height: 70px 
-	line-height: 70px
+.advertisment
+	display: inline-block
 	background: #ECECEC 
 	text-align: center
 	text-transform: uppercase
 	color: #CECECE 
+.advertisment-1
+	float: right
+	width: percentage(600/960) 
+	height: 70px 
+	line-height: 70px
 .page-header__menu
 	background: #DDD 
 	+clr
@@ -105,12 +105,14 @@ main
 .container
 	width: percentage(630/960) 
 	margin-right: percentage(30/960)
+	margin-bottom: 35px 
 	float: left
 .article__header
 	margin: 20px 0 5px 0
 	font: 30px 'Open Sans', sans-serif 
 .article__date
 	display: inline-block
+	vertical-align: top
 	padding-right: 20px
 	color: #B0B0B0 
 	font-size: 11px
@@ -121,6 +123,7 @@ main
 		+s(date) 
 .article__comments
 	display: inline-block
+	vertical-align: top
 	color: #B0B0B0 
 	font-size: 11px
 	+verdana
@@ -128,7 +131,250 @@ main
 		display: inline-block
 		padding-right: 5px
 		+s(comments)
+article 
+	font-size: 12px
+	+verdana
+	p
+		color: #717171	 
+		margin: 20px 0
+		a
+			text-decoration: underline
+			color: #5AACCE 
+figure
+	width: 100%
+	height: 430px
+	background: #DDD 
+figcaption
+	text-align: center
+	font-style: italic
+	padding: 10px 0 20px 0
+	color: #B0B0B0 
+.article-tools
+	margin: 30px 0
+	+clr
+.item-title
+	border-bottom: 1px solid #dddddd
+	color: #CE5A5A 
+	font: 12px 'Open Sans', sans-serif
+	text-transform: uppercase 
+	padding: 5px 0
+	margin-bottom: 10px
+.article-tools__share
+	width: percentage(300/630)
+	margin-right: percentage(30/630)
+	float: left 
+	.share-1
+		display: inline-block
+		padding-right: 35px
+		+s(share-1) 
+	.share-2
+		display: inline-block
+		padding-right: 35px
+		+s(share-2)
+	.share-3
+		display: inline-block
+		padding-right: 35px
+		+s(share-3)
+	.share-4
+		display: inline-block
+		padding-right: 35px
+		+s(share-4)
+	.share-5
+		display: inline-block
+		padding-right: 35px
+		+s(share-5)
+	.share-6
+		display: inline-block
+		+s(share-6)
+.article-tools__tags
+	float: right
+	width: percentage(300/630)
+	p
+		color: #717171 
+		font-size: 11px
+		+verdana
+.comments
+	.comments__post
+		padding: 15px 0
+		.comments__img
+			display: inline-block
+			width: 50px
+			height: 50px
+			background: #DDD 
+			font-size: 0
+			margin-right: 10px
+		.comments__item
+			display: inline-block
+			width: percentage(560/630) 
+			vertical-align: top
+			+verdana 
+			.comments__name
+				display: inline-block
+				color: #000
+				font-size: 12px 
+				font-weight: bold
+				padding-right: 10px
+			.comments__date
+				display: inline-block
+				color: #B8B8B8
+				font-size: 10px 
+				padding-right: 10px
+			a
+				display: inline-block
+				color: #5AACCE
+				font-size: 10px
+				text-decoration: underline
+			p
+				padding-top: 5px
+				color: #717171 
+				font-size: 12px 
+	.comments__post_reply
+		margin-left: percentage(60/630) 
+		padding-bottom: 25px
+		.comments__item
+			width: percentage(510/630) 
+.article-leavecomment
+	color: #717171
+	font-size: 12px
+	+verdana
+	p
+		padding-bottom: 15px 
+	span
+		color: #CE5A5A 
+	.form
+		.form__title
+			padding: 15px 0
+		.input
+			width: 220px
+			height: 30px
+			padding: 5px
+			background: #E8E8E8
+		.textarea
+			background: #E8E8E8 
+			padding: 5px
+			width: 100% 
+		.form__hint
+			p
+				font-size: 11px
+				padding: 10px 0
+		.btn
+			padding: 15px
+			background: #5AACCE 
+			color: #FFF 
+			text-align: center
+			text-transform: uppercase
 
 .sidebar
 	width: percentage(300/960) 
 	float: right
+.sidebar-articles
+	.sidebar-articles__post
+		padding-bottom: 20px
+		vertical-align: top
+		font-size: 11px
+		color: #717171
+		+verdana 
+	.sidebar-articles__img
+		display: inline-block
+		width: 100px
+		height: 100px
+		padding-right: 5px
+		background: #DDD 
+	.sidebar-articles__item
+		display: inline-block
+		width: percentage(190/300)
+	.sidebar-articles__title
+		padding-bottom: 5px
+		font: 14px 'Open Sans', sans-serif
+		color: #000  
+.advertisment-2
+	width: 140px
+	height: 140px
+	line-height: 140px
+	margin-right: 15px
+	margin-bottom: 20px
+.advertisment-3
+	width: 140px
+	height: 140px
+	line-height: 140px
+	margin-bottom: 20px
+.advertisment-4
+	width: 140px
+	height: 140px
+	line-height: 140px
+	margin-right: 15px
+.advertisment-5
+	width: 140px
+	height: 140px
+	line-height: 140px
+.advertisment-6
+	width: 300px
+	height: 140px
+	line-height: 140px
+	margin-bottom: 20px
+	
+// footer
+.footer__in
+	border-top: 1px solid #ddd 
+	padding-bottom: 50px
+.footer__col
+	width: percentage(235/960)
+	display: inline-block
+	vertical-align: top
+	+verdana
+	p
+		color: #717171
+		font-size: 11px
+		margin: 0 5px 10px 5px
+.footer__title
+	padding: 5px
+	margin-bottom: 10px
+	color: #CE5A5A
+	font-size: 10px
+	text-transform: uppercase
+.footer__menu
+	display: inline-block
+	margin: 0 5px
+	li
+		padding: 2px
+		a
+			color: #717171 
+.footer__social
+	width: 100px
+	margin: 0 5px
+	.social-1
+		display: inline-block
+		margin: 0 15px 15px 0
+		+s(social-1)
+	.social-2
+		display: inline-block
+		margin: 0 20px 15px 2px
+		+s(social-2)
+	.social-3
+		display: inline-block
+		margin-bottom: 15px
+		+s(social-3)
+	.social-4
+		display: inline-block
+		margin: 0 15px 15px 0
+		+s(social-4)
+	.social-5
+		display: inline-block
+		margin: 0 15px 15px 0
+		+s(social-5)
+	.social-6
+		display: inline-block
+		margin-bottom: 15px
+		+s(social-6)
+.footer__input
+	position: relative
+	width: 195px
+.f-input
+	margin: 0 5px
+	padding: 5px 10px
+	background: #E8E8E8 
+.input-arr
+	position: absolute
+	top: 6px
+	right: 7px
+	+s(input-arr)
