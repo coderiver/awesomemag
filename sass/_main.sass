@@ -3,23 +3,25 @@
 +font(verdana, verdana)
 =verdana
 	font-family: "Verdana", Arial, sans-serif
+	
+=rm($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
+
 
 a
 	text-decoration: none
-	&:hover
-		color: #000
-	&:visited
-		color: #000
-	&:active
-		color: #000
 	
 .out
 	background: #FFF
+	width: 97%
+	margin: 0 auto 
 	
 .l-center
-	max-width: 960px
+	max-width: 980px
 	margin: 0 auto
 	
+
 // header
 .page-header__tools
 	border-bottom: 1px solid #dddddd
@@ -42,9 +44,13 @@ a
 .page-header__logo-page
 	padding: 15px 0
 	+clr
+	+r(500)
+		text-align: center
 	a
 		float: left
 		line-height: 70px
+		+r(500)
+			float: none
 		img
 			vertical-align: middle
 .advertisment
@@ -55,33 +61,90 @@ a
 	color: #CECECE 
 .advertisment-1
 	float: right
-	width: percentage(600/960) 
+	width: percentage(600/930) 
 	height: 70px 
 	line-height: 70px
+	+r(500)	
+		width: 100% 
 .page-header__menu
-	background: #DDD 
+	background: #DDD
+	position: relative 
 	+clr
 	ul
 		float: left
-		height: 40px
+		text-align: center
 		+clr
+		+r(920)
+			width: 100%
+		+r(635)
+			display: none
+		+rm(635)
+			display: block !important
 		li
 			float: left
 			line-height: 40px
+			+r(635)
+				float: none
+				border-top: 1px solid #CECECE
 			a
-				padding: 0 10px
+				display: block
 				color: #717171 
 				font: 14px 'Open Sans', sans-serif
 				text-transform: uppercase
 				vertical-align: middle 
+				padding: 10px
+				+r(715)
+					padding: 10px 5px
 			&:hover
 				background: #D45757 
 				a
 					color: #FFF
+.menu-button
+	display: none
+	width: 25px
+	padding: 10px 15px
+	background: #DDD 
+	float: left
+	span
+		display: block
+		position: relative
+		height: 16px
+		border-top: 2px solid #717171 
+		border-bottom: 2px solid #717171
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			height: 2px
+			background: #717171 
+			margin-top: -1px
+	&:hover
+		background: #D45757 
+		span
+			border-color: #FFF
+			&:before
+				background: #FFF 
+	+r(635)
+		display: block
 .page-header__search
 	position: relative
 	float: right
 	width: 200px
+	+r(920)
+		width: 100%
+	+r(635)
+		width: percentage(435/485) 
+		position: absolute
+		top: 0
+		right: 0
+	+r(560)
+		width: percentage(420/485) 
+	+r(440)
+		width: percentage(400/485) 
+	+r(360)
+		width: percentage(390/485)
 	input
 		background-color: #CECECE  
 		height: 40px
@@ -99,14 +162,18 @@ a
 		right: 13px
 		+s(search)
 
+
 // main
 main
 	+clr
 .container
-	width: percentage(630/960) 
-	margin-right: percentage(30/960)
+	width: percentage(620/930) 
+	margin-right: percentage(20/930)
 	margin-bottom: 35px 
 	float: left
+	+r(700)
+		float: none
+		width: 100% 
 .article__header
 	margin: 20px 0 5px 0
 	font: 30px 'Open Sans', sans-serif 
@@ -208,12 +275,22 @@ figcaption
 			width: percentage(560/630) 
 			vertical-align: top
 			+verdana 
+			+r(860)
+				width: percentage(540/630)
+			+r(640)
+				width: percentage(520/630)
+			+r(400)
+				width: 80% 
+			+r(320)
+				width: 75%   
 			.comments__name
 				display: inline-block
 				color: #000
 				font-size: 12px 
 				font-weight: bold
 				padding-right: 10px
+				+r(768)
+					padding-right: 5px
 			.comments__date
 				display: inline-block
 				color: #B8B8B8
@@ -232,7 +309,9 @@ figcaption
 		margin-left: percentage(60/630) 
 		padding-bottom: 25px
 		.comments__item
-			width: percentage(510/630) 
+			width: percentage(510/630)
+			+r(400)
+				width: 75% 
 .article-leavecomment
 	color: #717171
 	font-size: 12px
@@ -252,7 +331,7 @@ figcaption
 		.textarea
 			background: #E8E8E8 
 			padding: 5px
-			width: 100% 
+			width: 95% 
 		.form__hint
 			p
 				font-size: 11px
@@ -265,9 +344,13 @@ figcaption
 			text-transform: uppercase
 
 .sidebar
-	width: percentage(300/960) 
+	width: percentage(290/930) 
 	float: right
+	+r(700)
+		width: 100%
+		float: none 
 .sidebar-articles
+	margin-top: 35px
 	.sidebar-articles__post
 		padding-bottom: 20px
 		vertical-align: top
@@ -282,50 +365,100 @@ figcaption
 		background: #DDD 
 	.sidebar-articles__item
 		display: inline-block
-		width: percentage(190/300)
+		vertical-align: top
+		width: percentage(170/300)
+		+r(700)
+			width: 80%
+		+r(560)
+			width: 70%
+		+r(480)	
+			width: 65%
+		+r(360)	
+			width: 60%
 	.sidebar-articles__title
 		padding-bottom: 5px
 		font: 14px 'Open Sans', sans-serif
-		color: #000  
+		color: #000 
+	.sidebar-articles__text
+		padding-bottom: 5px 
 .advertisment-2
 	width: 140px
 	height: 140px
 	line-height: 140px
 	margin-right: 15px
-	margin-bottom: 20px
+	margin-bottom: 15px
 .advertisment-3
 	width: 140px
 	height: 140px
 	line-height: 140px
-	margin-bottom: 20px
+	margin-bottom: 15px
+	+r(700)
+		margin-right: 15px
 .advertisment-4
 	width: 140px
 	height: 140px
 	line-height: 140px
 	margin-right: 15px
+	margin-bottom: 15px
 .advertisment-5
 	width: 140px
 	height: 140px
 	line-height: 140px
 .advertisment-6
-	width: 300px
+	width: 100%
+	height: 140px
+	line-height: 140px
+	margin-bottom: 20px
+	+r(700)
+		margin-right: 40px
+.advertisment-7
+	width: 100%
 	height: 140px
 	line-height: 140px
 	margin-bottom: 20px
 	
+
 // footer
 .footer__in
 	border-top: 1px solid #ddd 
 	padding-bottom: 50px
 .footer__col
-	width: percentage(235/960)
 	display: inline-block
 	vertical-align: top
 	+verdana
+	+r(700)
+		margin-bottom: 20px
+	+r(500)
+		text-align: center
 	p
 		color: #717171
 		font-size: 11px
 		margin: 0 5px 10px 5px
+.f-col1
+	width: percentage(240/960)
+	+r(700)
+		width: percentage(475/960)
+	+r(500)
+		width: 100% 
+.f-col2
+	width: percentage(160/960)
+	+r(700)
+		width: percentage(475/960)
+	+r(500)
+		width: 100%
+.f-col3
+	width: percentage(240/960)
+	+r(700)
+		width: percentage(475/960)
+	+r(500)
+		width: 100%
+.f-col4
+	width: percentage(300/960)
+	+r(700)
+		width: percentage(475/960)
+	+r(500)
+		width: 100%
+
 .footer__title
 	padding: 5px
 	margin-bottom: 10px
@@ -342,6 +475,8 @@ figcaption
 .footer__social
 	width: 100px
 	margin: 0 5px
+	+r(500)
+		margin: 0 auto
 	.social-1
 		display: inline-block
 		margin: 0 15px 15px 0
@@ -368,10 +503,12 @@ figcaption
 		+s(social-6)
 .footer__input
 	position: relative
-	width: 195px
+	width: 185px
+	+r(500)
+		margin: 0 auto
 .f-input
 	margin: 0 5px
-	padding: 5px 10px
+	padding: 5px
 	background: #E8E8E8 
 .input-arr
 	position: absolute
